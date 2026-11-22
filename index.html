@@ -7,6 +7,7 @@
   window.dataLayer = window.dataLayer || [];
   function gtag() { window.dataLayer.push(arguments); }
   gtag('js', new Date());
+  gtag('config', 'AW-18434678759');
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>배달 앱전환</title>
@@ -37,6 +38,22 @@ iframe + a .poster { display: none }
 <div><template><iframe referrerpolicy="strict-origin-when-cross-origin" title="배달 앱전환 영상 2" src="https://www.youtube-nocookie.com/embed/-ucJbigszPA" allowfullscreen></iframe></template><a href="https://www.youtube.com/shorts/-ucJbigszPA"><span class="poster" style="background-image:url(https://i.ytimg.com/vi/-ucJbigszPA/hqdefault.jpg),linear-gradient(125deg,#216354,#142c38)"><span aria-hidden="true">▶</span></span>두 번째 영상 YouTube에서 보기</a></div>
 </div></main>
 <script>
+const playLink = document.getElementById('play-store-link');
+playLink.addEventListener('click', function (event) {
+  const options = { send_to: 'AW-18434678759/9GQeCP_Dq70dEOe_q9ZE' };
+  if (!event.ctrlKey && !event.metaKey && !event.shiftKey && !event.altKey) {
+    event.preventDefault();
+    let navigated = false;
+    function openPlayStore() {
+      if (navigated) return;
+      navigated = true;
+      window.location.assign(playLink.href);
+    }
+    setTimeout(openPlayStore, 1000);
+    options.event_callback = openPlayStore;
+  }
+  gtag('event', 'conversion', options);
+});
 if (location.protocol === 'https:' || location.protocol === 'http:') {
   for (const player of document.querySelectorAll('.videos template')) {
     player.replaceWith(player.content.cloneNode(true))
