@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ko">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>배달 앱전환</title>
+<style>
+* { box-sizing: border-box }
+body { margin: 0; background: #f3f7f5; color: #12342d; font: 1rem/1.6 system-ui,sans-serif }
+main { max-width: 820px; margin: auto; padding: 5vh 20px }
+header { padding: clamp(24px,6vw,58px); background: #103b34; border-radius: 24px; color: white }
+h1 { font-size: clamp(36px,7vw,64px); margin: 0; letter-spacing: -.05em }
+p { margin: 4px 0 22px }
+.install { display: inline-block; padding: 12px 20px; border-radius: 10px; background: #aff3cb; color: #103b34; text-decoration: none; font-weight: 700 }
+.videos { display: grid; grid-template-columns: repeat(auto-fit,minmax(min(240px,100%),1fr)); gap: 20px }
+iframe { width: 100%; aspect-ratio: 9/16; border: 0; border-radius: 12px; background: #172822 }
+a { color: #145d48 }
+.videos a { display: block; font-weight: 650; text-decoration: none }
+.poster { display: grid; place-items: center; aspect-ratio: 4/3; background-size: cover; background-position: center; border-radius: 14px; margin-bottom: 8px }
+.poster span { border-radius: 50%; background: #102822dd; color: white; padding: 10px 15px }
+iframe + a .poster { display: none }
+</style>
+<main>
+<header><h1>배달 앱전환</h1>
+<p>배달 중 사용하는 앱 사이를 간편하게 전환하세요.</p>
+<a class="install" id="play-store-link" href="https://play.google.com/store/apps/details?id=com.beeru.tapswitch">Google Play에서 설치하기</a></header>
+<h2>앱 소개 영상</h2>
+<div class="videos">
+<div><template><iframe referrerpolicy="strict-origin-when-cross-origin" title="배달 앱전환 영상 1" src="https://www.youtube-nocookie.com/embed/ObrkZjGIZu4" allowfullscreen></iframe></template><a href="https://www.youtube.com/shorts/ObrkZjGIZu4"><span class="poster" style="background-image:url(https://i.ytimg.com/vi/ObrkZjGIZu4/hqdefault.jpg),linear-gradient(125deg,#216354,#142c38)"><span aria-hidden="true">▶</span></span>첫 번째 영상 YouTube에서 보기</a></div>
+<div><template><iframe referrerpolicy="strict-origin-when-cross-origin" title="배달 앱전환 영상 2" src="https://www.youtube-nocookie.com/embed/-ucJbigszPA" allowfullscreen></iframe></template><a href="https://www.youtube.com/shorts/-ucJbigszPA"><span class="poster" style="background-image:url(https://i.ytimg.com/vi/-ucJbigszPA/hqdefault.jpg),linear-gradient(125deg,#216354,#142c38)"><span aria-hidden="true">▶</span></span>두 번째 영상 YouTube에서 보기</a></div>
+</div></main>
+<script>
+if (location.protocol === 'https:' || location.protocol === 'http:') {
+  for (const player of document.querySelectorAll('.videos template')) {
+    player.replaceWith(player.content.cloneNode(true))
+  }
+}
+</script>
+</html>
+
+
