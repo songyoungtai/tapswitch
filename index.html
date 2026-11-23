@@ -26,6 +26,8 @@ a { color: #145d48 }
 .poster { display: grid; place-items: center; aspect-ratio: 4/3; background-size: cover; background-position: center; border-radius: 14px; margin-bottom: 8px }
 .poster span { border-radius: 50%; background: #102822dd; color: white; padding: 10px 15px }
 iframe + a .poster { display: none }
+.screenshots { display: grid; grid-template-columns: repeat(auto-fit,minmax(min(220px,100%),1fr)); gap: 16px }
+.screenshots img { display: block; width: 100%; height: auto; border-radius: 12px }
 </style>
 </head>
 <main>
@@ -36,7 +38,19 @@ iframe + a .poster { display: none }
 <div class="videos">
 <div><template><iframe referrerpolicy="strict-origin-when-cross-origin" title="배달 앱전환 영상 1" src="https://www.youtube-nocookie.com/embed/ObrkZjGIZu4" allowfullscreen></iframe></template><a href="https://www.youtube.com/shorts/ObrkZjGIZu4"><span class="poster" style="background-image:url(https://i.ytimg.com/vi/ObrkZjGIZu4/hqdefault.jpg),linear-gradient(125deg,#216354,#142c38)"><span aria-hidden="true">▶</span></span>첫 번째 영상 YouTube에서 보기</a></div>
 <div><template><iframe referrerpolicy="strict-origin-when-cross-origin" title="배달 앱전환 영상 2" src="https://www.youtube-nocookie.com/embed/-ucJbigszPA" allowfullscreen></iframe></template><a href="https://www.youtube.com/shorts/-ucJbigszPA"><span class="poster" style="background-image:url(https://i.ytimg.com/vi/-ucJbigszPA/hqdefault.jpg),linear-gradient(125deg,#216354,#142c38)"><span aria-hidden="true">▶</span></span>두 번째 영상 YouTube에서 보기</a></div>
-</div></main>
+</div>
+<h2>앱 화면</h2>
+<div class="screenshots">
+  <a href="screenshots/01_ko.jpg"><img src="screenshots/01_ko.jpg" width="1080" height="2340" loading="lazy" alt="세로로 나열한 배달 앱 전환 버튼"></a>
+  <a href="screenshots/02_ko.jpg"><img src="screenshots/02_ko.jpg" width="1080" height="2340" loading="lazy" alt="원형 버튼을 세 영역으로 나눈 분할 선택"></a>
+  <a href="screenshots/03_ko.jpg"><img src="screenshots/03_ko.jpg" width="1080" height="2340" loading="lazy" alt="탭할 때마다 다음 앱으로 전환"></a>
+  <a href="screenshots/04_ko.jpg"><img src="screenshots/04_ko.jpg" width="1080" height="2340" loading="lazy" alt="플로팅 버튼 크기와 불투명도 설정"></a>
+  <a href="screenshots/05_ko.jpg"><img src="screenshots/05_ko.jpg" width="1080" height="2340" loading="lazy" alt="왼쪽 가장자리에 버튼 테두리만 표시"></a>
+  <a href="screenshots/06_ko.jpg"><img src="screenshots/06_ko.jpg" width="1080" height="2340" loading="lazy" alt="반복 전환 간격 설정"></a>
+  <a href="screenshots/07_ko.jpg"><img src="screenshots/07_ko.jpg" width="1080" height="2340" loading="lazy" alt="선택한 앱의 알림을 깜박임으로 표시"></a>
+  <a href="screenshots/08_ko.jpg"><img src="screenshots/08_ko.jpg" width="1080" height="2340" loading="lazy" alt="길게 눌러 여는 플로팅 버튼 메뉴"></a>
+</div>
+</main>
 <script>
 const playLink = document.getElementById('play-store-link');
 playLink.addEventListener('click', function (event) {
